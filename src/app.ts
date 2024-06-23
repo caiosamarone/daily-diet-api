@@ -2,6 +2,7 @@ import fastify from 'fastify'
 
 // import { transactionRoutes } from './routes/transactions'
 import cookie from '@fastify/cookie'
+import { userRoutes } from './routes/users'
 
 export const app = fastify()
 
@@ -13,9 +14,9 @@ app.addHook('preHandler', async (request, response) => {
   )
 }) //MIDDLEWARE GLOBAL
 
-// app.register(transactionRoutes, {
-//   prefix: 'transactions'
-// })
-app.get('/', (request, response) => {
-  response.send('Hello word')
+app.register(userRoutes, {
+  prefix: 'user'
+})
+app.get('/healthCheck', (request, response) => {
+  response.send('OK, API running')
 })

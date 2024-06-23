@@ -23,8 +23,8 @@
 
 - Banco de Dados [ X ]
 - Zod + Env [ X ]
-- Plugin Fastify [ ]
-- Tipagem Knex [ ]
+- Plugin Fastify [ X ]
+- Tipagem Knex [ X ]
 - Rotas Aplicacao [ ]
 - Hook Global [ ]
 - Testes Automatizados [ ]
