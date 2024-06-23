@@ -3,11 +3,24 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "caio.mendes",
   "license": "ISC",
+  "scripts": {
+    "test": "vitest",
+    "knex": "node --loader tsx ./node_modules/knex/bin/cli.js",
+    "dev": "tsx watch src/server.ts",
+    "lint": "eslint src -ext .ts --fix",
+    "build": "tsup src --out-dir build"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^9.3.1",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.28.0",
+    "knex": "^3.1.0",
+    "pg": "^8.12.0",
+    "sqlite3": "^5.1.7",
+    "zod": "^3.23.8"
+  },
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.2.2",
     "@types/node": "^20.14.8",
@@ -18,14 +31,5 @@
     "tsx": "^4.15.7",
     "typescript": "^5.5.2",
     "vitest": "^1.6.0"
-  },
-  "dependencies": {
-    "@fastify/cookie": "^9.3.1",
-    "dotenv": "^16.4.5",
-    "fastify": "^4.28.0",
-    "knex": "^3.1.0",
-    "pg": "^8.12.0",
-    "sqlite3": "^5.1.7",
-    "zod": "^3.23.8"
   }
 }

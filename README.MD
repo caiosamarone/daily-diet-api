@@ -21,8 +21,8 @@
 
 ## TODO
 
-- Banco de Dados [ ]
-- Zod + Env [ ]
+- Banco de Dados [ X ]
+- Zod + Env [ X ]
 - Plugin Fastify [ ]
 - Tipagem Knex [ ]
 - Rotas Aplicacao [ ]
