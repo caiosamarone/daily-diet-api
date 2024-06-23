@@ -2,6 +2,7 @@ import { FastifyInstance } from 'fastify'
 import { knex } from '../database'
 import { checkSessionIdExists } from '../middlewares/check-session-id-exists'
 import { z } from 'zod'
+import { randomUUID } from 'node'
 
 export async function userRoutes(app: FastifyInstance) {
   app.post(
@@ -34,6 +35,7 @@ export async function userRoutes(app: FastifyInstance) {
           .send({ success: false, message: 'User already exists' })
       }
       const newUser = {
+        id: randomUUID(),
         email,
         name,
         imgUrl: imgUrl ?? '',

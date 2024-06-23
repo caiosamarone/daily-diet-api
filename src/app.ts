@@ -1,6 +1,5 @@
 import fastify from 'fastify'
 
-// import { transactionRoutes } from './routes/transactions'
 import cookie from '@fastify/cookie'
 import { userRoutes } from './routes/users'
 
