@@ -2,6 +2,7 @@ import fastify from 'fastify'
 
 import cookie from '@fastify/cookie'
 import { userRoutes } from './routes/users'
+import { mealsRoutes } from './routes/meals'
 
 export const app = fastify()
 
@@ -16,6 +17,11 @@ app.addHook('preHandler', async (request, response) => {
 app.register(userRoutes, {
   prefix: 'user'
 })
+
+app.register(mealsRoutes, {
+  prefix: 'meal'
+})
+
 app.get('/healthCheck', (request, response) => {
   response.send('OK, API running')
 })
