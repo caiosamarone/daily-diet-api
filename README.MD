@@ -27,4 +27,4 @@
 - Tipagem Knex [ X ]
 - Rotas Aplicacao [ X ]
 - Hook Global [ X ]
-- Testes Automatizados [ ]
+- Testes Automatizados [ X ]
