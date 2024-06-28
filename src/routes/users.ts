@@ -22,7 +22,6 @@ export async function userRoutes(app: FastifyInstance) {
     }
 
     const findByEmail = await knex('users').where('email', email).first()
-    console.log(findByEmail)
 
     if (findByEmail?.email) {
       return reply

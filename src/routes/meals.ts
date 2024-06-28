@@ -180,16 +180,13 @@ export async function mealsRoutes(app: FastifyInstance) {
         },
         { bestOnDietSequence: 0, currentSequence: 0 }
       )
-      console.log(bestOnDietSequence)
 
-      reply
-        .status(200)
-        .send({
-          ...mealsCount,
-          ...onDietMealsCount,
-          ...outOfDietMealsCount,
-          bestOnDietSequence
-        })
+      reply.status(200).send({
+        ...mealsCount,
+        ...onDietMealsCount,
+        ...outOfDietMealsCount,
+        bestOnDietSequence
+      })
     }
   )
 }
